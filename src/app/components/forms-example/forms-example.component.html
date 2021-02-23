@@ -1,0 +1,42 @@
+ <div class="container-fluid">
+
+
+<form #loginFormulaire="ngForm">
+    <label>Email:</label>
+    <input #email="ngModel"
+
+    ngModel
+    ngModel name="email"
+    required
+    email
+    type="text" 
+    class="form-control"
+   
+    > 
+
+     <!-- pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" -->
+
+
+
+
+    <label>Password:</label>
+    <input #password="ngModel"
+    ngModel
+    ngModel name="password"
+    required
+    type="password"
+    class="form-control"
+    > 
+
+
+
+
+</form>
+
+<button class="btn btn-primary"
+(click)="login(loginFormulaire)" 
+[disabled]="loginFormulaire.invalid">
+    Send
+</button>
+
+ </div>

@@ -1,0 +1,25 @@
+<form #monFormulaire="ngForm">
+
+
+    <input type="text" 
+    ngModel name="monInput"
+    ngModel
+    class="form-control">
+    <input type="text" 
+    name="monInput2"
+    #monDeuxiemeInput="ngModel"
+    required
+    maxlength="7"
+    minlength="3"
+    pattern="[0-1]?\d{1,2}"
+    ngModel
+    class="form-control"
+    (click)="showInputValue(monDeuxiemeInput)">
+
+</form>
+
+<button class="btn-btn-primary"
+
+(click)="processForm(monFormulaire)"
+
+> Process</button>
