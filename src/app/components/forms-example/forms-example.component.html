@@ -4,15 +4,18 @@
 <form #loginFormulaire="ngForm">
     <label>Email:</label>
     <input #email="ngModel"
-
     ngModel
-    ngModel name="email"
+    name="email"
     required
     email
     type="text" 
     class="form-control"
    
     > 
+    <div *ngIf="email.invalid && email.touched" [ngStyle]="{'color': 'red' , 'backgroundColor':'LavenderBlush'}">invalid email</div>
+    <br>
+
+        <!-- [(ngModel)]="email" -->
 
      <!-- pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" -->
 
@@ -26,7 +29,9 @@
     required
     type="password"
     class="form-control"
+    minlength="6"
     > 
+    <div *ngIf="password.invalid && password.touched" [ngStyle]="{'color': 'red' , 'backgroundColor':'LavenderBlush'}">invalid password</div>
 
 
 

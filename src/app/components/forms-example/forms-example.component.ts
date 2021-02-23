@@ -8,7 +8,9 @@ import { EmailValidator, NgForm } from '@angular/forms';
 })
 export class FormsExampleComponent implements OnInit {
 
-  disable="true"
+  //  email='Please enter your email';
+  pass='Please enter your password';
+
 
   constructor() { }
 
